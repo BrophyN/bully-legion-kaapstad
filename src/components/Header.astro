@@ -8,7 +8,7 @@ const links = [
 
 <header class="site-header">
   <div class="container nav-shell">
-    <a class="brand" href="/" aria-label="Bully Legion KaapStad home"><span>BLK</span><small>Bully Legion<br />KaapStad</small></a>
+    <a class="brand" href="/" aria-label="Bully Legion KaapStad home"><img src="/brand/blk-primary-logo.png" alt="BLK" /><small>Bully Legion<br />KaapStad</small></a>
     <nav aria-label="Main navigation">
       {links.map(([href, label]) => <a href={href} class={pathname === href ? 'active' : undefined}>{label}</a>)}
     </nav>
@@ -20,7 +20,7 @@ const links = [
   .site-header { position: sticky; top: 0; z-index: 20; background: var(--obsidian); color: var(--ivory); border-bottom: 1px solid var(--line); }
   .nav-shell { display: flex; align-items: center; gap: 1.5rem; min-height: 76px; }
   .brand { display: flex; align-items: center; gap: 0.55rem; flex: 0 0 auto; color: var(--ivory); }
-  .brand span { color: var(--ivory); font-family: var(--display); font-size: 1.65rem; font-weight: 700; line-height: 0.8; letter-spacing: 0.03em; }
+  .brand img { width: 50px; height: 50px; object-fit: cover; }
   .brand small { color: var(--bronze); font-size: 0.48rem; font-weight: 700; letter-spacing: 0.16em; line-height: 1.35; text-transform: uppercase; }
   nav { display: flex; flex: 1; justify-content: center; gap: 1.15rem; color: rgba(232, 225, 213, 0.72); font-size: 0.64rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
   nav a { padding: 0.35rem 0; }
