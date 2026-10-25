@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from './PageIntro.astro';
+interface Props { title: string; eyebrow: string; copy: string; label: string; }
+const { title, eyebrow, copy, label } = Astro.props;
+---
+
+<Layout title={`${title} | Bully Legion KaapStad`} description={copy}>
+  <PageIntro eyebrow={eyebrow} title={title} copy={copy} />
+  <section class="listing container">
+    <div class="listing-head"><div><p class="eyebrow">Verified profiles</p><h2 class="display">Records before<br />recognition.</h2></div><p>Individual profiles will publish when their health testing, pedigree information, and photography have been fully verified.</p></div>
+    <div class="notice"><span>{label}</span><strong>Profiles in preparation</strong><p>BLK does not publish incomplete breeding information. Please contact us for current programme updates.</p><a class="button primary" href="/contact">Contact BLK</a></div>
+  </section>
+</Layout>
+
+<style>
+  .listing { padding: 5rem 0 7rem; }
+  .listing-head { display: grid; grid-template-columns: 1fr 0.55fr; gap: 4rem; align-items: end; }
+  h2 { margin: 0; font-size: clamp(3rem, 5vw, 5rem); }
+  .listing-head > p { margin: 0; color: var(--muted); }
+  .notice { display: grid; grid-template-columns: 0.25fr 1fr 1.6fr auto; align-items: center; gap: 1.25rem; margin-top: 3rem; padding: 2rem; border-top: 3px solid var(--bronze); background: #ddd5c8; }
+  .notice span { color: var(--bronze); font-weight: 700; }
+  .notice strong { font-family: var(--display); font-size: 2rem; line-height: 1; }
+  .notice p { margin: 0; color: var(--muted); }
+  @media (max-width: 760px) { .listing { padding: 3.5rem 0 5rem; } .listing-head { grid-template-columns: 1fr; gap: 1.5rem; } .notice { grid-template-columns: 1fr; } }
+</style>

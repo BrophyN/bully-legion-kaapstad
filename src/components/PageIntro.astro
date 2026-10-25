@@ -1,0 +1,19 @@
+---
+interface Props { eyebrow: string; title: string; copy: string; }
+const { eyebrow, title, copy } = Astro.props;
+---
+
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1 class="display">{title}</h1>
+    <p>{copy}</p>
+  </div>
+</section>
+
+<style>
+  .page-intro { padding: 6rem 0 4.5rem; background: var(--obsidian); color: var(--ivory); }
+  .page-intro h1 { max-width: 850px; margin: 0; font-size: clamp(4rem, 9vw, 8rem); }
+  .page-intro p:last-child { max-width: 650px; margin: 1.5rem 0 0; color: rgba(232,225,213,0.75); font-size: 1.05rem; }
+  @media (max-width: 700px) { .page-intro { padding: 4rem 0 3rem; } }
+</style>

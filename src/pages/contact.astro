@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+<Layout title="Contact BLK | Bully Legion KaapStad" description="Contact Bully Legion KaapStad in Cape Town, South Africa.">
+  <PageIntro eyebrow="Start a considered conversation" title="Get in touch." copy="For programme updates, future homes, and general BLK enquiries, use the channel that suits you." />
+  <section class="contact container"><a href="mailto:hello@bullylegionkaapstad.co.za"><span>Email</span><strong>hello@bullylegionkaapstad.co.za</strong><i>01</i></a><div><span>Location</span><strong>Cape Town<br />South Africa</strong><i>02</i></div><div><span>Social</span><strong>Channels to be announced</strong><i>03</i></div></section>
+</Layout>
+<style>
+  .contact { padding: 2rem 0 7rem; } .contact > * { position: relative; display: grid; grid-template-columns: 0.3fr 1fr auto; gap: 1rem; align-items: center; padding: 2.2rem 0; border-bottom: 1px solid #c5bcae; } .contact > :first-child { border-top: 1px solid #c5bcae; } .contact span { color: var(--bronze); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; } .contact strong { font-family: var(--display); font-size: clamp(2rem, 4vw, 4rem); line-height: 0.9; } .contact i { color: var(--muted); font-style: normal; } a:hover strong { color: var(--bronze); } @media (max-width: 600px) { .contact { padding-bottom: 4rem; } .contact > * { grid-template-columns: 1fr auto; } .contact strong { grid-column: 1; } .contact i { grid-column: 2; grid-row: 1 / 3; } }
+</style>
