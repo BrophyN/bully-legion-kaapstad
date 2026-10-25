@@ -8,7 +8,7 @@ const links = [
 
 <header class="site-header">
   <div class="container nav-shell">
-    <a class="brand" href="/" aria-label="Bully Legion KaapStad home"><span>BLK</span><small>Bully Legion KaapStad</small></a>
+    <a class="brand" href="/" aria-label="Bully Legion KaapStad home"><span>BLK</span><small>Bully Legion<br />KaapStad</small></a>
     <nav aria-label="Main navigation">
       {links.map(([href, label]) => <a href={href} class={pathname === href ? 'active' : undefined}>{label}</a>)}
     </nav>
@@ -19,12 +19,12 @@ const links = [
 <style>
   .site-header { position: sticky; top: 0; z-index: 20; background: var(--obsidian); color: var(--ivory); border-bottom: 1px solid var(--line); }
   .nav-shell { display: flex; align-items: center; gap: 1.5rem; min-height: 76px; }
-  .brand { display: grid; gap: 0.05rem; flex: 0 0 auto; color: var(--ivory); }
-  .brand span { font-family: var(--display); font-size: 2rem; line-height: 0.8; letter-spacing: 0.08em; }
-  .brand small { color: var(--bronze); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-  nav { display: flex; flex: 1; justify-content: center; gap: 1.15rem; color: rgba(232, 225, 213, 0.72); font-size: 0.8rem; font-weight: 600; }
+  .brand { display: flex; align-items: center; gap: 0.55rem; flex: 0 0 auto; color: var(--ivory); }
+  .brand span { color: var(--ivory); font-family: var(--display); font-size: 1.65rem; font-weight: 700; line-height: 0.8; letter-spacing: 0.03em; }
+  .brand small { color: var(--bronze); font-size: 0.48rem; font-weight: 700; letter-spacing: 0.16em; line-height: 1.35; text-transform: uppercase; }
+  nav { display: flex; flex: 1; justify-content: center; gap: 1.15rem; color: rgba(232, 225, 213, 0.72); font-size: 0.64rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
   nav a { padding: 0.35rem 0; }
   nav a:hover, nav a.active { color: var(--ivory); }
-  .enquire { padding: 0.65rem 0.85rem; border: 1px solid var(--bronze); color: var(--bronze); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+  .enquire { padding: 0.65rem 0.85rem; border: 1px solid var(--bronze); color: var(--bronze); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
   @media (max-width: 900px) { nav { display: none; } .nav-shell { justify-content: space-between; } }
 </style>
